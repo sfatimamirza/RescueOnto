@@ -10,7 +10,7 @@
      xmlns:schema="http://schema.org/"
      xmlns:schema1="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#schema:"
      xmlns:hasRepair="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasRepair&amp;">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology">
     
 
 
@@ -5014,6 +5014,7 @@
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">During emergency handling, CTWO, caller and ambulance driver are in conference call.</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
+</owl:Ontology>
 
 
 
