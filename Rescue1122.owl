@@ -28,6 +28,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#acceptsEmergency -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#acceptsEmergency">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OperationsDeptEmployee"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EMDS"/>
@@ -51,7 +52,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#canHaveDeath">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Schema::Patient"/>
+        <rdfs:domain rdf:resource="https://schema.org/schema:Patient"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#TypesOfDeath"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">While dealing with emergency case, patient can have either clinical death(heart attack) or biological death.</rdfs:label>
     </owl:ObjectProperty>
@@ -215,7 +216,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasDetails -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasDetails">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Schema::Patient"/>
+        <rdfs:domain rdf:resource="https://schema.org/schema:Patient"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PatientDetails"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Details of patient are stored.</rdfs:label>
     </owl:ObjectProperty>
@@ -482,7 +483,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasVitals -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasVitals">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Schema::Patient"/>
+        <rdfs:domain rdf:resource="https://schema.org/schema:Patient"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Vitals"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient has vitals.</rdfs:label>
     </owl:ObjectProperty>
@@ -568,7 +569,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#providesTreatment">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OperationsDeptEmployee"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Schema::Patient"/>
+        <rdfs:range rdf:resource="https://schema.org/schema:Patient"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMT treats the patient in ambulance</rdfs:label>
     </owl:ObjectProperty>
     
@@ -578,7 +579,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#reachesLocationOf">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceService"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Schema::Patient"/>
+        <rdfs:range rdf:resource="https://schema.org/schema:Patient"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ambulance reaches location of patient.</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2004,18 +2005,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Schema::Patient -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Schema::Patient">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Someone who is suffering with a medical condition.</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://schema.org/schema:Map -->
 
     <owl:Class rdf:about="https://schema.org/schema:Map">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMDS displays location of ambulances on map.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/schema:Patient -->
+
+    <owl:Class rdf:about="https://schema.org/schema:Patient">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Someone who is suffering with a medical condition.</rdfs:label>
     </owl:Class>
     
 
@@ -4127,7 +4128,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#patient1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#patient1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Schema::Patient"/>
+        <rdf:type rdf:resource="https://schema.org/schema:Patient"/>
         <canHaveDeath rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#biologicalDeath"/>
         <canHaveDeath rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#clinicalDeath"/>
         <hasDetails rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#patientDetails"/>
