@@ -7,8 +7,11 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:schema="http://schema.org/">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology">
-<!-- Add metadata about your ontology here -->
+   <owl:Ontology rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology">
+    <!-- Add metadata about your ontology here -->
+    <owl:versionInfo>1.0</owl:versionInfo>
+    <owl:license rdf:resource="http://example.org/licenses/by-nc/4.0/"/>
+    <!-- Add more metadata properties as needed -->
   </owl:Ontology>
  
     
