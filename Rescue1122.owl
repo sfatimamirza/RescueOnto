@@ -1502,7 +1502,6 @@
     <!-- http://schema.org/Vehicle -->
 
     <owl:Class rdf:about="http://schema.org/Vehicle">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceStructure"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">various vehicle used in rescue1122</rdfs:label>
     </owl:Class>
     
@@ -1520,7 +1519,6 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceEquipments -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceEquipments">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceStructure"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Various types of euipments are used in the emergency handling procedure.</rdfs:label>
     </owl:Class>
     
@@ -1531,14 +1529,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceService">
         <rdfs:subClassOf rdf:resource="http://schema.org/Vehicle"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vehicles which provide ambulance facilities.</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceStructure -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceStructure">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ambulance Structure module explains all the types of ambulance vehicles, their cabins and equipments contained in them.</rdfs:label>
     </owl:Class>
     
 
@@ -1573,7 +1563,6 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CallType -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CallType">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calls are categorized in various types.</rdfs:label>
     </owl:Class>
     
@@ -1591,7 +1580,6 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CallerInformation -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CallerInformation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caller is asked about his/her details.</rdfs:label>
     </owl:Class>
     
@@ -1617,7 +1605,6 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Colors -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Colors">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DialogBox changes color according to various situations during the emergency.</rdfs:label>
     </owl:Class>
     
@@ -1663,7 +1650,6 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ConferenceCall -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ConferenceCall">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">caller, CTWO and ambulance driver are connected via conference call.</rdfs:label>
     </owl:Class>
     
@@ -1671,9 +1657,7 @@
 
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ControlRoom -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ControlRoom">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ControlRoom"/>
     
 
 
@@ -1689,7 +1673,6 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OrganisationalStructure"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue 1122 has multiple departments.</rdfs:label>
     </owl:Class>
     
@@ -1698,7 +1681,6 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#DialogBox -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#DialogBox">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dialogbox on EMDS which changes colors according to situations.</rdfs:label>
     </owl:Class>
     
@@ -1707,7 +1689,6 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Dispatcher -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Dispatcher">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dispatcher dispatches the ambulance.</rdfs:label>
     </owl:Class>
     
@@ -1724,9 +1705,7 @@
 
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EMDS -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EMDS">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EMDS"/>
     
 
 
@@ -1748,7 +1727,6 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Employees -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Employees">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OrganisationalStructure"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parent class of all the employees of Rescue1122.</rdfs:label>
     </owl:Class>
     
@@ -1757,7 +1735,6 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EmtCabin -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EmtCabin">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceStructure"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cabin of the emergency medical technitian in ambulance.</rdfs:label>
     </owl:Class>
     
@@ -1828,7 +1805,6 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Forms -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Forms">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forms is superclass, it is parent class of all the forms used by rescue1122.</rdfs:label>
     </owl:Class>
     
@@ -1855,7 +1831,6 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#LtwoCabin -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#LtwoCabin">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceStructure"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cabin of the driver in ambulance</rdfs:label>
     </owl:Class>
     
@@ -1893,14 +1868,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OperationsDeptEmployee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Employees"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Operations dept.</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OrganisationalStructure -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OrganisationalStructure">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class describes rescue1122 organisational structure</rdfs:label>
     </owl:Class>
     
 
@@ -1943,9 +1910,7 @@
 
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OrganisationalStructure"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell"/>
     
 
 
@@ -2019,14 +1984,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 monitors whole rescue operation</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescuerTrainingCourses -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescuerTrainingCourses">
@@ -2057,7 +2014,6 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#TypesOfDeath -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#TypesOfDeath">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In an emergency, patient can have biological or clinical death.</rdfs:label>
     </owl:Class>
     
@@ -2092,6 +2048,7 @@
     <!-- https://schema.org/schema:Patient -->
 
     <owl:Class rdf:about="https://schema.org/schema:Patient">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Someone who is suffering with a medical condition.</rdfs:label>
     </owl:Class>
     
