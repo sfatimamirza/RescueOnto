@@ -6,14 +6,11 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:schema="http://schema.org/">
-   <owl:Ontology rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology">
-    <!-- Add metadata about your ontology here -->
-    <owl:versionInfo>1.0</owl:versionInfo>
-    <owl:license rdf:resource="http://example.org/licenses/by-nc/4.0/"/>
-    <!-- Add more metadata properties as needed -->
-  </owl:Ontology>
- 
+     xmlns:schema="http://schema.org/"
+     xmlns:hasRepair="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasRepair&amp;">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology">
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    </owl:Ontology>
     
 
 
@@ -64,7 +61,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OperationsDeptEmployee"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EMDS"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMDS installed on the rescue officers in the ambulance shows call for emergency which is accepted by the rescue team and then they head towards the location of incident or patient.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMDS installed on the rescue officers in the ambulance shows call for emergency which is accepted by the rescue team and then they head towards the location of incident or patient.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -75,7 +72,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ControlRoomStaff"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CallerInformation"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When a person calls rescue1122, his details are asked by CTWO.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When a person calls rescue1122, his details are asked by CTWO.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -86,7 +83,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://schema.org/schema:Patient"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#TypesOfDeath"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">While dealing with emergency case, patient can have either clinical death(heart attack) or biological death.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">While dealing with emergency case, patient can have either clinical death(heart attack) or biological death.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -98,7 +95,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ControlRoomStaff"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CallType"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">for every call, CTWO has to classify the into some defined categories.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">for every call, CTWO has to classify the into some defined categories.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -118,7 +115,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#containsAmbulanceEquipments">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CarAmbulance"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommonEquipments"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">all the equipments contained by car ambulance</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">all the equipments contained by car ambulance</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -129,7 +126,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#BikeAmbulance"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#BikeAmbulanceEquipments"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">all the equipments contained by bike ambulance.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">all the equipments contained by bike ambulance.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -146,7 +143,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contains all the equipments of fire ambulance</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contains all the equipments of fire ambulance</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -159,11 +156,22 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommonEquipments"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contains all the equipments of rescue ambulance</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contains all the equipments of rescue ambulance</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#dealsWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#dealsWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue 1122 deals with various emergencies</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -173,6 +181,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#dispatches">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Dispatcher"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceService"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 employee dispatches amublance</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -183,7 +192,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PatientRefferalForm"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceDetails"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient referal form contains details of the ambulance on which patient is shifted.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient referal form contains details of the ambulance on which patient is shifted.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -193,7 +202,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasAuditDeptEmployee">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AuditDeptEmployee"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audit dept has various employees.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audit dept has various employees.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -203,7 +212,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasCTWO">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ResponseForm"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ControlRoomStaff"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Response form contains the name of CTWO who picked call from Rescue1122</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Response form contains the name of CTWO who picked call from Rescue1122</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -220,7 +229,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In an Ambulance, EMT and LTWO have their own cabins</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In an Ambulance, EMT and LTWO have their own cabins</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -230,7 +239,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasColors">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#DialogBox"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Colors"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dialogbox changes color with respect to various sitautions during emergency handling</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dialogbox changes color with respect to various sitautions during emergency handling</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -240,7 +249,18 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasCommunitySafetyEmployee">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommunitySafetyDeptEmployee"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Community Safety dept has various employees.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Community Safety dept has various employees.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasDepartments -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasDepartments">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue 1122 has various departments</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -250,7 +270,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasDetails">
         <rdfs:domain rdf:resource="https://schema.org/schema:Patient"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PatientDetails"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Details of patient are stored.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Details of patient are stored.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -260,7 +280,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasEMT">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ResponseForm"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OperationsDeptEmployee"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Response form contains the name of EMT who is in ambulance.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Response form contains the name of EMT who is in ambulance.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -270,7 +290,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasEMTcabin">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OperationsDeptEmployee"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EmtCabin"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMT has his cabin.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMT has his cabin in ambulance</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -280,7 +300,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasEMTequipment">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EmtCabin"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EmtCabinEquipment"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contains all the equipment EMT cabin has</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contains all the equipment EMT cabin has</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -291,7 +311,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Caller"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caller calls in case of emergency</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caller calls in case of emergency</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -301,7 +321,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasEmergencyServicesAcademyEmployee">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EmergencyServicesAcademyEmployee"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emergency Services Academy dept has various employees.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emergency Services Academy dept has various employees.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -311,7 +331,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasFinanceDeptEmployee">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FinanceDeptEmployee"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finance dept has various employees.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finance dept has various employees.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -321,7 +341,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasFireType">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FireEmergency"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ClassesOfFire"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fire has various types.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fire has various types.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -331,7 +351,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasHRdeptEmployee">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#HrDeptEmployee"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HR dept has various employees.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HR dept has various employees.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -341,7 +361,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasIncidentCommander">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OperationsDeptEmployee"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Every emergency is lead by an incident commander</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Every emergency is lead by an incident commander</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -349,9 +369,10 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasInformation -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasInformation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Caller"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CallerInformation"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information of caller is stored.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information of caller is stored.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -361,7 +382,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasLTVdriver">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ResponseForm"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OperationsDeptEmployee"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Response form contains name of the driver of ambulance.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Response form contains name of the driver of ambulance.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -371,7 +392,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasLTWOcabin">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OperationsDeptEmployee"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#LtwoCabin"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LTWO has his cabin in ambulance.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LTWO has his cabin in ambulance.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -381,7 +402,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasLTWOequipment">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#LtwoCabin"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#LtwoCabinEquipment"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contains all the equipments contained in LTWO cabin</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contains all the equipments contained in LTWO cabin</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -391,7 +412,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasModules">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommunitySafetyTrainingCourses"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommunityTrainingModules"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Community training course is divided into various modules.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Community training course is divided into various modules.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -401,7 +422,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasOffices">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
         <rdfs:range rdf:resource="http://schema.org/Place"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has offices in every district.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has offices in every district.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -411,7 +432,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasOperationsDeptEmployee">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OperationsDeptEmployee"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Operations dept has various employees.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Operations dept has various employees.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -421,7 +442,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasPMERemployee">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PlanningMonitortingEvaluationResearchEmployee"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMER dept has various employees.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMER dept has various employees.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -438,7 +459,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PatientDetails"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the details of the patients</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the details of the patients</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -455,7 +476,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Vitals"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">response form stores value of all the vitals of patient</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">response form stores value of all the vitals of patient</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -465,7 +486,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasProcurementDeptEmployee">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProcurementDeptEmployee"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Procurement dept has various employees.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Procurement dept has various employees.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -475,7 +496,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasPublicInfoWingEmployee">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PublicInformationWingEmployee"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Public info dept has various employees.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Public info dept has various employees.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -486,7 +507,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PatientRefferalForm"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ReferredHospitalDetails"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient referral form contains details of referred hospital.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient referral form contains details of referred hospital.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -497,7 +518,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PatientRefferalForm"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ReferringHospitalDetails"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">patient referral form contains details of the hospital patient is referred from.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">patient referral form contains details of the hospital patient is referred from.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -507,7 +528,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasResourcesDeployed">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceService"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Every emergency deploys resources which include ambulances</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Every emergency deploys resources which include ambulances</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -517,7 +538,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasVitals">
         <rdfs:domain rdf:resource="https://schema.org/schema:Patient"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Vitals"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient has vitals.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient has vitals.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -528,7 +549,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122Wings"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">various services provided by rescue 1122 are categorized under rescue wings</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">various services provided by rescue 1122 are categorized under rescue wings</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -538,7 +559,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#isClassifiedAs">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Fire"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ClassesOfFire"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fire is given different types</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fire is given different types</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -549,7 +570,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Caller"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caller calls resue1122 in case of emegency</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caller calls resue1122 in case of emegency</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -559,7 +580,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#picksCallsIn">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ControlRoomStaff"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ControlRoom"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTWO picks call in control room.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTWO picks call in control room.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -570,7 +591,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceService"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue 1122 provides ambulance service.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue 1122 provides ambulance service.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -581,7 +602,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122Wings"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommunitySafetyTrainingCourses"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">community safety wing offers many courses to the community</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">community safety wing offers many courses to the community</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -592,7 +613,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescuerTrainingCourses"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rescue 1122 has courses for rescuers training,</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rescue 1122 has courses for rescuers training,</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -602,7 +623,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#providesTreatment">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OperationsDeptEmployee"/>
         <rdfs:range rdf:resource="https://schema.org/schema:Patient"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMT treats the patient in ambulance</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMT treats the patient in ambulance</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -612,7 +633,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#reachesLocationOf">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceService"/>
         <rdfs:range rdf:resource="https://schema.org/schema:Patient"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ambulance reaches location of patient.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ambulance reaches location of patient.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -622,7 +643,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#routesCallTo">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ControlRoom"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">when calller calls rescue1122, call goes to head office from where it is routed to nearest rescue office of the caller.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">when calller calls rescue1122, call goes to head office from where it is routed to nearest rescue office of the caller.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -632,7 +653,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#selectsAmbulance">
         <rdfs:domain rdf:resource="http://schema.org/Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceService"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTWO selects ambulance from EMDS for emergency handling.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTWO selects ambulance from EMDS for emergency handling.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -642,7 +663,17 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#showLocationOn">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EMDS"/>
         <rdfs:range rdf:resource="https://schema.org/schema:Map"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMDS shows location</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMDS shows location</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#supervisedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#supervisedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provincial monitoring cell supervises all employees</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -659,7 +690,18 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMDS tracks location</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMDS tracks location</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#usesSoftware -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#usesSoftware">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EMDS"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 uses EMDS software for emergency management</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -669,7 +711,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasLaw&amp;AdministrationDeptEmployee">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Law&amp;AdministrationDeptEmployee"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Law and Admin  dept has various employees.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Law and Admin  dept has various employees.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -679,7 +721,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasRepair&amp;maintenanceEmployee">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RepairMaintenanceEmployee"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RM dept has various employees.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RM dept has various employees.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -701,7 +743,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">services provided by rescue 1122</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">services provided by rescue 1122</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -719,7 +761,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores address</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores address</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -730,7 +772,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PatientDetails"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the medical diagnosis of patient</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the medical diagnosis of patient</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -741,7 +783,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">support email address of rescue 1122.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">support email address of rescue 1122.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -761,7 +803,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores gender</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores gender</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -772,7 +814,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://schema.org/schema:Map"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the radius</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the radius</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -783,7 +825,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CallerInformation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores phone number</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores phone number</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -801,7 +843,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the responding time of ambulance</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the responding time of ambulance</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -818,7 +860,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores abbreviations</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores abbreviations</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -829,7 +871,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PatientDetails"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Age of Patient</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Age of Patient</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -840,7 +882,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceService"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores ambulance number</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores ambulance number</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -850,7 +892,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#approximateLoss">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FireEmergency"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the amount of loss in emergency.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the amount of loss in emergency.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -860,7 +902,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#approximateSavings">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FireEmergency"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the amount of savings in emergency</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the amount of savings in emergency</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -871,7 +913,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">average response time for emergency</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">average response time for emergency</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -882,7 +924,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Vitals"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores blood pressure</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores blood pressure</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -900,7 +942,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores time when the referring hospital calls</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores time when the referring hospital calls</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -911,7 +953,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ResponseForm"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the cause of emergency as fall , fire, violence etc</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the cause of emergency as fall , fire, violence etc</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -922,7 +964,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PatientDetails"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CNIC is unique identification of individual</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CNIC is unique identification of individual</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -933,7 +975,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Vitals"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores conscious level as subconscious, unconscious, conscious</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores conscious level as subconscious, unconscious, conscious</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -943,7 +985,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#coveredArea">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FireEmergency"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in case of fire emergency, the amount of area covered by fire.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in case of fire emergency, the amount of area covered by fire.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -961,7 +1003,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the date</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the date</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -979,7 +1021,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">District.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">District.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -990,7 +1032,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ReferringHospitalDetails"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the name of doctor on duty from referring hospital</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the name of doctor on duty from referring hospital</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1000,7 +1042,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#emergencyNo">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unique identification number of emergency.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unique identification number of emergency.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1011,7 +1053,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ResponseForm"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the names of emergency officers on duty</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the names of emergency officers on duty</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1022,7 +1064,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores established date of rescue 1122</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores established date of rescue 1122</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1032,7 +1074,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#fateOfEmergency">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weather the emergency was taken care of or not.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weather the emergency was taken care of or not.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1043,7 +1085,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Forms"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores unique form number</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores unique form number</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1053,7 +1095,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#headquarter">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue 1122 headquarter.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue 1122 headquarter.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1063,7 +1105,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#helpline">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">helpline contact of 1122</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">helpline contact of 1122</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1081,7 +1123,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the name of hospital</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the name of hospital</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1099,7 +1141,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores hospital code</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores hospital code</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1110,7 +1152,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ClassesOfFire"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the cause of fire</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the cause of fire</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1121,7 +1163,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PatientDetails"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores patient s/o, d/o, w/o</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores patient s/o, d/o, w/o</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1132,7 +1174,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommunitySafetyTrainingCourses"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores beginner, intermediate and advance level</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores beginner, intermediate and advance level</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1142,7 +1184,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#members">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ConferenceCall"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">members of the conferrence call.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">members of the conferrence call.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1153,7 +1195,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceDetails"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kms travelled before emergency</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kms travelled before emergency</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1164,7 +1206,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceDetails"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kms travelled after emergency</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kms travelled after emergency</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1174,7 +1216,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#natureOfEmergency">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emergency can be of many kinds.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emergency can be of many kinds.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1185,7 +1227,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the operational hours of rescue 1122</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the operational hours of rescue 1122</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1195,7 +1237,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ownerOfArea">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FireEmergency"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">incase of fire emergency, owner of the area where fire erupted.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">incase of fire emergency, owner of the area where fire erupted.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1206,7 +1248,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PatientRefferalForm"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores patient referral no</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores patient referral no</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1217,7 +1259,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ResponseForm"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the place where emergency has taken place</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the place where emergency has taken place</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1228,7 +1270,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Vitals"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the pulse rate of patient</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the pulse rate of patient</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1239,7 +1281,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceEquipments"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the quantity of each equipment</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the quantity of each equipment</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1250,7 +1292,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ReferringHospitalDetails"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the reason why patient is being shifted</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the reason why patient is being shifted</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1261,7 +1303,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ReferredHospitalDetails"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores recieving date and time of PTS ambulance</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores recieving date and time of PTS ambulance</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1279,7 +1321,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the name of doc who recieves the patient</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the name of doc who recieves the patient</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1290,7 +1332,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ReferringHospitalDetails"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the unit of hospital which refers the patient for PTS</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the unit of hospital which refers the patient for PTS</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1301,7 +1343,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ReferringHospitalDetails"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the time when patient is referred for PTS</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the time when patient is referred for PTS</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1312,7 +1354,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Colors"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shows the state of emergency</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shows the state of emergency</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1323,7 +1365,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Vitals"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores body temp of patient</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores body temp of patient</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1334,7 +1376,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Dispatcher"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the time of dispatch of ambulance</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the time of dispatch of ambulance</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1345,7 +1387,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceDetails"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the time when ambulance came</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the time when ambulance came</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1356,7 +1398,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceDetails"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the time when ambulance left</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the time when ambulance left</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1366,7 +1408,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#totalVictims">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total victims.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total victims.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1376,7 +1418,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#typeOfConstruction">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FireEmergency"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">incase of fire emergency, the type of construction of building.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">incase of fire emergency, the type of construction of building.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1387,7 +1429,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ResponseForm"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the type of injury like fracture, burn etc</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the type of injury like fracture, burn etc</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1398,7 +1440,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ResponseForm"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the vehicle which caused the accident</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the vehicle which caused the accident</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1417,7 +1459,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the  name</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the  name</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1436,7 +1478,7 @@
     <!-- http://schema.org/Course -->
 
     <owl:Class rdf:about="http://schema.org/Course">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue 1122 provides various courses to general public and its own team.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue 1122 provides various courses to general public and its own team.</rdfs:comment>
     </owl:Class>
     
 
@@ -1444,7 +1486,7 @@
     <!-- http://schema.org/Person -->
 
     <owl:Class rdf:about="http://schema.org/Person">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">person can be anyone a vicitim employee etc</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">person can be anyone a vicitim employee etc</rdfs:comment>
     </owl:Class>
     
 
@@ -1452,7 +1494,7 @@
     <!-- http://schema.org/Place -->
 
     <owl:Class rdf:about="http://schema.org/Place">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">all the districts and places of pakistan</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">all the districts and places of pakistan</rdfs:comment>
     </owl:Class>
     
 
@@ -1461,7 +1503,7 @@
 
     <owl:Class rdf:about="http://schema.org/Vehicle">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceStructure"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">various vehicle used in rescue1122</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">various vehicle used in rescue1122</rdfs:comment>
     </owl:Class>
     
 
@@ -1470,7 +1512,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceDetails">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FormDetails"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Details of the ambulance vehicle used.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Details of the ambulance vehicle used.</rdfs:comment>
     </owl:Class>
     
 
@@ -1479,7 +1521,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceEquipments">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceStructure"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Various types of euipments are used in the emergency handling procedure.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Various types of euipments are used in the emergency handling procedure.</rdfs:comment>
     </owl:Class>
     
 
@@ -1488,7 +1530,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceService">
         <rdfs:subClassOf rdf:resource="http://schema.org/Vehicle"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vehicles which provide ambulance facilities.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vehicles which provide ambulance facilities.</rdfs:comment>
     </owl:Class>
     
 
@@ -1496,7 +1538,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceStructure -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceStructure">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ambulance Structure module explains all the types of ambulance vehicles, their cabins and equipments contained in them.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ambulance Structure module explains all the types of ambulance vehicles, their cabins and equipments contained in them.</rdfs:comment>
     </owl:Class>
     
 
@@ -1505,7 +1547,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AuditDeptEmployee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Employees"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Audit dept.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Audit dept.</rdfs:comment>
     </owl:Class>
     
 
@@ -1514,7 +1556,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#BikeAmbulance">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceService"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bike equipped with first aid services.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bike equipped with first aid services.</rdfs:comment>
     </owl:Class>
     
 
@@ -1523,7 +1565,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#BikeAmbulanceEquipments">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceEquipments"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">equipments present in bike amublance.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">equipments present in bike amublance.</rdfs:comment>
     </owl:Class>
     
 
@@ -1532,7 +1574,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CallType">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calls are categorized in various types.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calls are categorized in various types.</rdfs:comment>
     </owl:Class>
     
 
@@ -1541,7 +1583,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Caller">
         <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">person who calls rescue1122 for emergency.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">person who calls rescue1122 for emergency.</rdfs:comment>
     </owl:Class>
     
 
@@ -1550,7 +1592,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CallerInformation">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caller is asked about his/her details.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caller is asked about his/her details.</rdfs:comment>
     </owl:Class>
     
 
@@ -1559,7 +1601,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CarAmbulance">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceService"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Car equipped with various emergency handling equipments.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Car equipped with various emergency handling equipments.</rdfs:comment>
     </owl:Class>
     
 
@@ -1567,7 +1609,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ClassesOfFire -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ClassesOfFire">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">There are various Classes of Fire based on the substance causing the fire.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">There are various Classes of Fire based on the substance causing the fire.</rdfs:comment>
     </owl:Class>
     
 
@@ -1576,7 +1618,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Colors">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DialogBox changes color according to various situations during the emergency.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DialogBox changes color according to various situations during the emergency.</rdfs:comment>
     </owl:Class>
     
 
@@ -1585,7 +1627,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommonEquipments">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceEquipments"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">There are common equipments which are same in different types of ambulances.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">There are common equipments which are same in different types of ambulances.</rdfs:comment>
     </owl:Class>
     
 
@@ -1594,7 +1636,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommunitySafetyDeptEmployee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Employees"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Community Safety dept.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Community Safety dept.</rdfs:comment>
     </owl:Class>
     
 
@@ -1604,7 +1646,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommunitySafetyTrainingCourses">
         <rdfs:subClassOf rdf:resource="http://schema.org/Course"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescuerTrainingCourses"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Safety courses offered to general public by rescue 1122.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Safety courses offered to general public by rescue 1122.</rdfs:comment>
     </owl:Class>
     
 
@@ -1613,7 +1655,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommunityTrainingModules">
         <rdfs:subClassOf rdf:resource="http://schema.org/Course"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Community safety trainings have various modules.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Community safety trainings have various modules.</rdfs:comment>
     </owl:Class>
     
 
@@ -1622,7 +1664,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ConferenceCall">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">caller, CTWO and ambulance driver are connected via conference call.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">caller, CTWO and ambulance driver are connected via conference call.</rdfs:comment>
     </owl:Class>
     
 
@@ -1639,7 +1681,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ControlRoomStaff">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OperationsDeptEmployee"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in control room.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in control room.</rdfs:comment>
     </owl:Class>
     
 
@@ -1648,7 +1690,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OrganisationalStructure"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue 1122 has multiple departments.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue 1122 has multiple departments.</rdfs:comment>
     </owl:Class>
     
 
@@ -1657,7 +1699,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#DialogBox">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dialogbox on EMDS which changes colors according to situations.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dialogbox on EMDS which changes colors according to situations.</rdfs:comment>
     </owl:Class>
     
 
@@ -1666,7 +1708,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Dispatcher">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dispatcher dispatches the ambulance.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dispatcher dispatches the ambulance.</rdfs:comment>
     </owl:Class>
     
 
@@ -1675,7 +1717,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#District">
         <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the district of hospital</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stores the district of hospital</rdfs:comment>
     </owl:Class>
     
 
@@ -1690,9 +1732,7 @@
 
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An emergency is a sudden and often critical situation that demands immediate action to mitigate potential harm or damage.</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency"/>
     
 
 
@@ -1700,7 +1740,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EmergencyServicesAcademyEmployee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Employees"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Emergency Services Academy dept.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Emergency Services Academy dept.</rdfs:comment>
     </owl:Class>
     
 
@@ -1709,7 +1749,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Employees">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OrganisationalStructure"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parent class of all the employees of Rescue1122.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parent class of all the employees of Rescue1122.</rdfs:comment>
     </owl:Class>
     
 
@@ -1718,7 +1758,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EmtCabin">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceStructure"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cabin of the emergency medical technitian in ambulance.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cabin of the emergency medical technitian in ambulance.</rdfs:comment>
     </owl:Class>
     
 
@@ -1727,7 +1767,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EmtCabinEquipment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceEquipments"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipments which are used in the EMT cabin.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipments which are used in the EMT cabin.</rdfs:comment>
     </owl:Class>
     
 
@@ -1736,7 +1776,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FinanceDeptEmployee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Employees"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Finance dept.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Finance dept.</rdfs:comment>
     </owl:Class>
     
 
@@ -1744,7 +1784,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Fire -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Fire">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fire emergency</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fire emergency</rdfs:comment>
     </owl:Class>
     
 
@@ -1753,7 +1793,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FireAmbulance">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceService"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Car equipped with various fire emergency handling equipments.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Car equipped with various fire emergency handling equipments.</rdfs:comment>
     </owl:Class>
     
 
@@ -1762,7 +1802,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FireAmbulanceEquipments">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceEquipments"/>
-        <rdfs:label>contains all the equipments used for fire emergency</rdfs:label>
+        <rdfs:comment>contains all the equipments used for fire emergency</rdfs:comment>
     </owl:Class>
     
 
@@ -1771,7 +1811,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FireEmergency">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fire emergency is a life-threatening situation involving uncontrolled flames and smoke, requiring swift action to ensure safety and minimize property damag</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fire emergency is a life-threatening situation involving uncontrolled flames and smoke, requiring swift action to ensure safety and minimize property damag</rdfs:comment>
     </owl:Class>
     
 
@@ -1780,7 +1820,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FormDetails">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Forms"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FormDetails class is parent class of all the class containing various details of forms.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FormDetails class is parent class of all the class containing various details of forms.</rdfs:comment>
     </owl:Class>
     
 
@@ -1789,7 +1829,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Forms">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forms is superclass, it is parent class of all the forms used by rescue1122.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forms is superclass, it is parent class of all the forms used by rescue1122.</rdfs:comment>
     </owl:Class>
     
 
@@ -1798,7 +1838,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#HeadOffice">
         <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has head office in lahore.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has head office in lahore.</rdfs:comment>
     </owl:Class>
     
 
@@ -1807,7 +1847,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#HrDeptEmployee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Employees"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Human Resource dept.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Human Resource dept.</rdfs:comment>
     </owl:Class>
     
 
@@ -1816,7 +1856,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#LtwoCabin">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceStructure"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cabin of the driver in ambulance</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cabin of the driver in ambulance</rdfs:comment>
     </owl:Class>
     
 
@@ -1825,7 +1865,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#LtwoCabinEquipment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceEquipments"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipments which are used in the LTWO cabin.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipments which are used in the LTWO cabin.</rdfs:comment>
     </owl:Class>
     
 
@@ -1834,7 +1874,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#MedicalEmergency">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical emergency is a critical and potentially life-threatening situation that necessitates prompt medical attention to prevent further harm or save a person&apos;s life.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A medical emergency is a critical and potentially life-threatening situation that necessitates prompt medical attention to prevent further harm or save a person&apos;s life.</rdfs:comment>
     </owl:Class>
     
 
@@ -1843,7 +1883,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#NaturalDisaster">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A natural disaster is a catastrophic event caused by natural forces, such as earthquakes, hurricanes, floods, or wildfires, leading to widespread destruction and often requiring emergency response and relief efforts</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A natural disaster is a catastrophic event caused by natural forces, such as earthquakes, hurricanes, floods, or wildfires, leading to widespread destruction and often requiring emergency response and relief efforts</rdfs:comment>
     </owl:Class>
     
 
@@ -1852,14 +1892,16 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OperationsDeptEmployee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Employees"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Operations dept.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Operations dept.</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OrganisationalStructure -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OrganisationalStructure"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#OrganisationalStructure">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class describes rescue1122 organisational structure</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -1867,7 +1909,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PatientDetails">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FormDetails"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Complete Details of patient are stored.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Complete Details of patient are stored.</rdfs:comment>
     </owl:Class>
     
 
@@ -1876,7 +1918,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PatientRefferalForm">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Forms"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient refferal form is used when patient is refered from one hospital to another.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient refferal form is used when patient is refered from one hospital to another.</rdfs:comment>
     </owl:Class>
     
 
@@ -1885,7 +1927,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PlanningMonitortingEvaluationResearchEmployee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Employees"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Planning Monitoring Evaluation and Research dept.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Planning Monitoring Evaluation and Research dept.</rdfs:comment>
     </owl:Class>
     
 
@@ -1894,7 +1936,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProcurementDeptEmployee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Employees"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Procurement dept.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Procurement dept.</rdfs:comment>
     </owl:Class>
     
 
@@ -1911,7 +1953,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PublicInformationWingEmployee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Employees"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Public Information Wing dept.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Public Information Wing dept.</rdfs:comment>
     </owl:Class>
     
 
@@ -1920,7 +1962,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ReferredHospitalDetails">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FormDetails"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Complete details of the hospital where the patient is going to be transfered.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Complete details of the hospital where the patient is going to be transfered.</rdfs:comment>
     </owl:Class>
     
 
@@ -1929,7 +1971,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ReferringHospitalDetails">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FormDetails"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Complete details of the hospital from where the patient is transfered.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Complete details of the hospital from where the patient is transfered.</rdfs:comment>
     </owl:Class>
     
 
@@ -1938,7 +1980,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RepairMaintenanceEmployee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Employees"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Repair and maintenance dept.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Repair and maintenance dept.</rdfs:comment>
     </owl:Class>
     
 
@@ -1946,7 +1988,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leading rescue organisation pakistan, RESCUE1122.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leading rescue organisation pakistan, RESCUE1122.</rdfs:comment>
     </owl:Class>
     
 
@@ -1954,7 +1996,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122Wings -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122Wings">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has categorised its services into modules known as Wings.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has categorised its services into modules known as Wings.</rdfs:comment>
     </owl:Class>
     
 
@@ -1963,22 +2005,24 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulance">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceService"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Car equipped with various rescue equipments.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Car equipped with various rescue equipments.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceEquipments"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipments used in the rescue operations.</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
-    
-
-
-    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceEquipments"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipments used in the rescue operations.</rdfs:label>
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 monitors whole rescue operation</rdfs:comment>
     </owl:Class>
     
 
@@ -1987,7 +2031,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescuerTrainingCourses">
         <rdfs:subClassOf rdf:resource="http://schema.org/Course"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has training courses for rescuers which are for their training.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has training courses for rescuers which are for their training.</rdfs:comment>
     </owl:Class>
     
 
@@ -1996,7 +2040,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ResponseForm">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Forms"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Response Form is filled for every emergency case, it contains basic information about emergency and patient.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Response Form is filled for every emergency case, it contains basic information about emergency and patient.</rdfs:comment>
     </owl:Class>
     
 
@@ -2005,7 +2049,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#TreatmentDetails">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FormDetails"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Details of all the medication provided by rescue 1122 to patient/victim</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Details of all the medication provided by rescue 1122 to patient/victim</rdfs:comment>
     </owl:Class>
     
 
@@ -2014,7 +2058,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#TypesOfDeath">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueOperation"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In an emergency, patient can have biological or clinical death.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In an emergency, patient can have biological or clinical death.</rdfs:comment>
     </owl:Class>
     
 
@@ -2023,7 +2067,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Vitals">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FormDetails"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vital signs refer to a set of measurable physiological indicators that provide crucial information about a person&apos;s basic bodily functions and overall health status. They include blood pressure, temperature etc.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vital signs refer to a set of measurable physiological indicators that provide crucial information about a person&apos;s basic bodily functions and overall health status. They include blood pressure, temperature etc.</rdfs:comment>
     </owl:Class>
     
 
@@ -2032,7 +2076,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Law&amp;AdministrationDeptEmployee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Employees"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Law &amp; Administration dept.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue1122 has various employees in Law &amp; Administration dept.</rdfs:comment>
     </owl:Class>
     
 
@@ -2040,7 +2084,7 @@
     <!-- https://schema.org/schema:Map -->
 
     <owl:Class rdf:about="https://schema.org/schema:Map">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMDS displays location of ambulances on map.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMDS displays location of ambulances on map.</rdfs:comment>
     </owl:Class>
     
 
@@ -2048,7 +2092,7 @@
     <!-- https://schema.org/schema:Patient -->
 
     <owl:Class rdf:about="https://schema.org/schema:Patient">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Someone who is suffering with a medical condition.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Someone who is suffering with a medical condition.</rdfs:comment>
     </owl:Class>
     
 
@@ -2107,7 +2151,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CERT">
         <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommunitySafetyTrainingCourses"/>
         <abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Community Emergency Response Team</abbreviation>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">community emergency response team</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">community emergency response team</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2117,7 +2161,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CFR">
         <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescuerTrainingCourses"/>
         <abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Community Fire Responder</abbreviation>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">community fire responder</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">community fire responder</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2195,7 +2239,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EFR">
         <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescuerTrainingCourses"/>
         <abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emergency First Responder</abbreviation>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emergency first responder</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emergency first responder</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2210,6 +2254,15 @@
         <tracksLocationOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#carAmbulance1"/>
         <tracksLocationOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#fireAmbulance1"/>
         <tracksLocationOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#rescueAmbulance1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency"/>
+        <hasIncidentCommander rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#emergencyOfficer"/>
     </owl:NamedIndividual>
     
 
@@ -2246,7 +2299,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PLSP">
         <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommunitySafetyTrainingCourses"/>
         <abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakistan Life Saving Program</abbreviation>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pakistan life saving program</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pakistan life saving program</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2267,12 +2320,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RCC -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RCC">
         <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommunitySafetyTrainingCourses"/>
         <abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue Cadet Course</abbreviation>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rescue cadet course</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rescue cadet course</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2419,7 +2480,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#anchoringTools -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#anchoringTools">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -2435,7 +2496,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#angularGrinder -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#angularGrinder">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -2519,6 +2580,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#audit">
         <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
         <hasAuditDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#internalAuditor"/>
+        <supervisedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell"/>
     </owl:NamedIndividual>
     
 
@@ -2558,7 +2620,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#basketStretcher -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#basketStretcher">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -2645,7 +2707,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#boldCutter -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#boldCutter">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -2653,7 +2715,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#bosunChair -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#bosunChair">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -2746,7 +2808,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#chainSawCutter -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#chainSawCutter">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -2754,7 +2816,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#chair -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#chair">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -2786,7 +2848,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#chippingHammer -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#chippingHammer">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -2794,7 +2856,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#chippingHammerDrill -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#chippingHammerDrill">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -2802,7 +2864,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#chisel -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#chisel">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -2952,7 +3014,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#dRing -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#dRing">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3020,7 +3082,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#diesalGenerator -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#diesalGenerator">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3045,7 +3107,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#disposeableRainSuit -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#disposeableRainSuit">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3085,7 +3147,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#diveLight -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#diveLight">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3117,7 +3179,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#drySuit -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#drySuit">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3125,7 +3187,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#dualPulley -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#dualPulley">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3133,7 +3195,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#earPlug -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#earPlug">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3141,7 +3203,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#electricExtensionLead -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#electricExtensionLead">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3149,7 +3211,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#electricSafetyShoes -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#electricSafetyShoes">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3157,7 +3219,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#electricWinch -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#electricWinch">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3189,7 +3251,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#emergencyFirstAidBag -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#emergencyFirstAidBag">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3335,7 +3397,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#extensionLadder -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#extensionLadder">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3367,7 +3429,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#figureEight -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#figureEight">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3381,6 +3443,7 @@
         <hasFinanceDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#assistantOfficerAccounts"/>
         <hasFinanceDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#headOfFinance"/>
         <hasFinanceDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#budget&amp;AccountOfficer"/>
+        <supervisedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell"/>
     </owl:NamedIndividual>
     
 
@@ -3433,6 +3496,14 @@
         <containsFireEquipments rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#walkieTalkieCharger"/>
         <containsFireEquipments rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#wirelessBase"/>
         <containsFireEquipments rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#10poundHammer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#fireEmergency -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#fireEmergency">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#FireEmergency"/>
     </owl:NamedIndividual>
     
 
@@ -3512,7 +3583,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#fullBodyHarness -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#fullBodyHarness">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3585,7 +3656,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hammer -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hammer">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3601,7 +3672,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#handTorch -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#handTorch">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3704,6 +3775,7 @@
         <hasHRdeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#headOfHR"/>
         <hasHRdeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#officeComputerOperator"/>
         <hasHRdeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#socialWellfareOperator"/>
+        <supervisedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell"/>
     </owl:NamedIndividual>
     
 
@@ -3711,7 +3783,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hydraullicJack -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hydraullicJack">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3784,7 +3856,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#jumpingSheet -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#jumpingSheet">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3896,7 +3968,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#lifeBuoyRing -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#lifeBuoyRing">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3904,7 +3976,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#lifeJacket -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#lifeJacket">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3947,7 +4019,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#manualRams -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#manualRams">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -3956,6 +4028,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#map">
         <rdf:type rdf:resource="https://schema.org/schema:Map"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#medicalEmergency -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#medicalEmergency">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#MedicalEmergency"/>
     </owl:NamedIndividual>
     
 
@@ -4032,6 +4112,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#naturalDisaster -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#naturalDisaster">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#NaturalDisaster"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#nebulizer -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#nebulizer">
@@ -4059,7 +4147,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#oars -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#oars">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4113,6 +4201,7 @@
         <hasOperationsDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#transportMaintenanceIncharge"/>
         <hasOperationsDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#wirelessTechnician"/>
         <hasOperationsDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#fire&amp;RescueService"/>
+        <supervisedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell"/>
     </owl:NamedIndividual>
     
 
@@ -4206,6 +4295,7 @@
         <hasPMERemployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#emergencyOfficerPD"/>
         <hasPMERemployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#headOfPlanningDevelopement"/>
         <hasPMERemployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#researchOfficer"/>
+        <supervisedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell"/>
     </owl:NamedIndividual>
     
 
@@ -4213,7 +4303,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#polytheneRainSuit -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#polytheneRainSuit">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4221,7 +4311,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#portableGenerator -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#portableGenerator">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4238,6 +4328,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#procurement">
         <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
+        <hasProcurementDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#emergencyOfficerProcurement"/>
+        <hasProcurementDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#headOfProcurement"/>
+        <supervisedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell"/>
     </owl:NamedIndividual>
     
 
@@ -4257,6 +4350,7 @@
         <hasPublicInfoWingEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#audioVideoCameraMan"/>
         <hasPublicInfoWingEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#inchargeArtSection"/>
         <hasPublicInfoWingEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#publicRelationOfficer"/>
+        <supervisedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell"/>
     </owl:NamedIndividual>
     
 
@@ -4296,7 +4390,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#rappellingRope -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#rappellingRope">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4366,6 +4460,18 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#rescue1122">
         <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
+        <dealsWith rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#fireEmergency"/>
+        <dealsWith rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#medicalEmergency"/>
+        <hasDepartments rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#audit"/>
+        <hasDepartments rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#communitySafetyWing"/>
+        <hasDepartments rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#finance"/>
+        <hasDepartments rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#humanResource"/>
+        <hasDepartments rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#operations"/>
+        <hasDepartments rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#planningMonitoringEvaluationResearch"/>
+        <hasDepartments rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#procurement"/>
+        <hasDepartments rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#publicInformationWing"/>
+        <hasDepartments rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#law&amp;Administration"/>
+        <hasDepartments rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#repair&amp;Maintenance"/>
         <hasOffices rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#lahore"/>
         <hasOffices rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#sargodha"/>
         <hasWings rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#communitySafety"/>
@@ -4409,7 +4515,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#rescueBoatEngine -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#rescueBoatEngine">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4434,6 +4540,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#rescueSafetyOfficerDistrict">
         <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommunitySafetyDeptEmployee"/>
+        <supervisedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell"/>
     </owl:NamedIndividual>
     
 
@@ -4441,7 +4548,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#rescueTripod -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#rescueTripod">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4465,7 +4572,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#resiprocatingSaw -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#resiprocatingSaw">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4499,7 +4606,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#rubberGloves -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#rubberGloves">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4523,7 +4630,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#safetyGoogles -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#safetyGoogles">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4547,7 +4654,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#safetyRopes -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#safetyRopes">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4571,7 +4678,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#scuba -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#scuba">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4579,7 +4686,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#scubaAccessories -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#scubaAccessories">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4587,7 +4694,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#searchLightStand -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#searchLightStand">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4595,7 +4702,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#seatBeltCutter -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#seatBeltCutter">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4667,7 +4774,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#shovel -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#shovel">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4683,7 +4790,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#sludgeSuit -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#sludgeSuit">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4691,7 +4798,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#snakeStick -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#snakeStick">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4795,7 +4902,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#swimmingSuit -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#swimmingSuit">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4803,7 +4910,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#table -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#table">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4811,7 +4918,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#telescopeLight -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#telescopeLight">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -4835,7 +4942,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#trafficCone -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#trafficCone">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueVehicleEquipment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RescueAmbulanceEquipment"/>
     </owl:NamedIndividual>
     
 
@@ -5002,6 +5109,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#law&amp;Administration">
         <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
         <hasEmergencyServicesAcademyEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#assistantLawOfficer"/>
+        <supervisedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell"/>
         <hasLawAndAdministrationDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#adminStaff"/>
         <hasLawAndAdministrationDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#emergencyOfficerAdmin"/>
         <hasLawAndAdministrationDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#emergencyOfficerFuel"/>
@@ -5021,6 +5129,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#repair&amp;Maintenance">
         <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
+        <supervisedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell"/>
+        <hasRepair:maintenanceEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#headOfRepairMaintenanceWing"/>
+        <hasRepair:maintenanceEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#transportMaintenanceInspector"/>
         <hasRepairAndMaintenanceEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#emergencyOfficerRM"/>
         <hasRepairAndMaintenanceEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#headOfRepairMaintenanceWing"/>
         <hasRepairAndMaintenanceEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#transportMaintenanceInspector"/>
@@ -5037,13 +5148,19 @@
      -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ControlRoom">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Control room is central room for all the operations management.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Control room is central room for all the operations management.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EMDS">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMDS is the software which manages emergency handling.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMDS is the software which manages emergency handling.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An emergency is a sudden and often critical situation that demands immediate action to mitigate potential harm or damage.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provincial monitoring cell monitors the working of all the employees</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#conferrenceCall">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">During emergency handling, CTWO, caller and ambulance driver are in conference call.</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">During emergency handling, CTWO, caller and ambulance driver are in conference call.</rdfs:comment>
     </rdf:Description>
 </rdf:RDF>
 
