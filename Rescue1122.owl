@@ -346,6 +346,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasForms -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasForms">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Forms"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue operation uses forms</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasHRdeptEmployee -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasHRdeptEmployee">
@@ -571,6 +581,16 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Caller"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caller calls resue1122 in case of emegency</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#offersCourses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#offersCourses">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Rescue1122"/>
+        <rdfs:range rdf:resource="http://schema.org/Course"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue 1122 offers courses</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1478,7 +1498,6 @@
     <!-- http://schema.org/Course -->
 
     <owl:Class rdf:about="http://schema.org/Course">
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Forms"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue 1122 provides various courses to general public and its own team.</rdfs:label>
     </owl:Class>
     
