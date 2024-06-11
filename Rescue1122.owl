@@ -80,7 +80,6 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#canHaveDeath -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#canHaveDeath">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://schema.org/schema:Patient"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#TypesOfDeath"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">While dealing with emergency case, patient can have either clinical death(heart attack) or biological death.</rdfs:label>
@@ -1580,6 +1579,7 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CallerInformation -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CallerInformation">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caller is asked about his/her details.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caller is asked about his/her details.</rdfs:label>
     </owl:Class>
     
