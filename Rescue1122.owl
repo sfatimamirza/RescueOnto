@@ -31,18 +31,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasLawAndAdministrationDeptEmployee -->
-
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasLawAndAdministrationDeptEmployee"/>
-    
-
-
-    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasRepairAndMaintenanceEmployee -->
-
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasRepairAndMaintenanceEmployee"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -528,6 +516,22 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Emergency"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#AmbulanceService"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Every emergency deploys resources which include ambulances</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasTreatmentDetails -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#hasTreatmentDetails">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PatientRefferalForm"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ResponseForm"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#TreatmentDetails"/>
     </owl:ObjectProperty>
     
 
@@ -2106,6 +2110,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CERT">
         <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommunitySafetyTrainingCourses"/>
+        <hasModules rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CPR"/>
+        <hasModules rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#bandage"/>
+        <hasModules rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#basicFireFighting"/>
+        <hasModules rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#foreignBodyObstacleChoking"/>
+        <hasModules rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#fractureManagement"/>
         <abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Community Emergency Response Team</abbreviation>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">community emergency response team</rdfs:label>
     </owl:NamedIndividual>
@@ -2254,6 +2263,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#PLSP">
         <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommunitySafetyTrainingCourses"/>
+        <hasModules rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CPR"/>
+        <hasModules rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#bandage"/>
+        <hasModules rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#basicFireFighting"/>
+        <hasModules rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#foreignBodyObstacleChoking"/>
+        <hasModules rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#fractureManagement"/>
         <abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakistan Life Saving Program</abbreviation>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pakistan life saving program</rdfs:label>
     </owl:NamedIndividual>
@@ -2288,6 +2302,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#RCC">
         <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CommunitySafetyTrainingCourses"/>
+        <hasModules rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#CPR"/>
+        <hasModules rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#basicFireFighting"/>
+        <hasModules rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#foreignBodyObstacleChoking"/>
+        <hasModules rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#fractureManagement"/>
         <abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rescue Cadet Course</abbreviation>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rescue cadet course</rdfs:label>
     </owl:NamedIndividual>
@@ -2585,8 +2603,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#batteries">
         <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#LtwoCabinEquipment"/>
-        <hasLTWOequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#stepney"/>
-        <hasLTWOequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#surgicalGloves"/>
     </owl:NamedIndividual>
     
 
@@ -3338,6 +3354,32 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#emtCabin">
         <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#EmtCabin"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#BPapparatus"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#airWayKit"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ambuBag"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#burnKit"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#cardiacMonitor"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#chestExtricationKit"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#diabitiesTestStrips"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#emergencyBag"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#emergencyLight"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#expenseBook"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#foldingPatientStretcher"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#glucoMeter"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#inverter"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#nebulizer"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#needleCutter"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#nylonRope"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#oxygenCylinder"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#pateintStretcher"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#portableOxygenCylinder"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#pulseOximeter"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#rescueRing"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#safetyBelt"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#safetyHarness"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#spineBoard"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#suctionUnit"/>
+        <hasEMTequipment rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ventilator"/>
     </owl:NamedIndividual>
     
 
@@ -4238,6 +4280,7 @@
         <hasPatientVitals rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#vitalsPatient1"/>
         <hasReferredHospDetails rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#refferedhosp"/>
         <hasReferringHospDetails rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#referringHosp"/>
+        <hasTreatmentDetails rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#treatment1"/>
         <formNo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48933</formNo>
     </owl:NamedIndividual>
     
@@ -4542,6 +4585,7 @@
         <hasLTVdriver rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#LTVdriver"/>
         <hasPatientDetails rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#patientDetails"/>
         <hasPatientVitals rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#vitalsPatient1"/>
+        <hasTreatmentDetails rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#treatment1"/>
         <causeOfEmergency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medical</causeOfEmergency>
         <date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-07-05T09:30:00+05:00</date>
         <emergencyOfficers rdf:datatype="http://www.w3.org/2001/XMLSchema#string">muhammad hassam</emergencyOfficers>
@@ -5066,17 +5110,6 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#Departments"/>
         <hasEmergencyServicesAcademyEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#assistantLawOfficer"/>
         <supervisedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell"/>
-        <hasLawAndAdministrationDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#adminStaff"/>
-        <hasLawAndAdministrationDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#emergencyOfficerAdmin"/>
-        <hasLawAndAdministrationDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#emergencyOfficerFuel"/>
-        <hasLawAndAdministrationDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#emergencyOfficerLaw"/>
-        <hasLawAndAdministrationDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#legalAssistant"/>
-        <hasLawAndAdministrationDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#seniorStoreKeeper"/>
-        <hasLawAndAdministrationDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#storeKeeper"/>
-        <hasLawAndAdministrationDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#storeSupervisor"/>
-        <hasLawAndAdministrationDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#supportStaff"/>
-        <hasLawAndAdministrationDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#emergencyOfficerStore&amp;Logistics"/>
-        <hasLawAndAdministrationDeptEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#headOfLaw&amp;Administration"/>
     </owl:NamedIndividual>
     
 
@@ -5088,9 +5121,6 @@
         <supervisedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#ProvincialMonitoringCell"/>
         <hasRepair:maintenanceEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#headOfRepairMaintenanceWing"/>
         <hasRepair:maintenanceEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#transportMaintenanceInspector"/>
-        <hasRepairAndMaintenanceEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#emergencyOfficerRM"/>
-        <hasRepairAndMaintenanceEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#headOfRepairMaintenanceWing"/>
-        <hasRepairAndMaintenanceEmployee rdf:resource="http://www.semanticweb.org/dell/ontologies/2023/4/rescueOntology#transportMaintenanceInspector"/>
     </owl:NamedIndividual>
     
 
